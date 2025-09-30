@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+
+import { extend } from "@pixi/react";
+import { Container, Graphics, Sprite, Text } from "pixi.js";
+import TradingChart from "./TradingChart";
+
+// extend tells @pixi/react what Pixi.js components are available
+extend({
+  Container,
+  Sprite,
+  Graphics,
+  Text,
+});
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <h1>PixiJS Test</h1>
+      <div style={{
+        display: "grid",
+        width: "100vw",
+        gridTemplateColumns: "200px 1fr"
+      }}>
+        <ul>
+          <li>NIFTY</li>
+          <li>BANKNIFTY</li>
+        </ul>
+        <TradingChart />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
