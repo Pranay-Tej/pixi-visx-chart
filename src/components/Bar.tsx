@@ -23,14 +23,12 @@ function Bar(props: Props) {
     onMouseLeave,
   } = props;
   const [color, setColor] = useState(fill);
-  console.log(color);
 
   return (
     <pixiGraphics
       interactive
       eventMode="static"
       onMouseEnter={() => {
-        console.log("hover");
         setColor(fillHighlight);
         onMouseEnter?.();
       }}

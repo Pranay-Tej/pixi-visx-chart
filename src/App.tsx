@@ -4,6 +4,7 @@ import { extend } from "@pixi/react";
 import { Container, Graphics, Text } from "pixi.js";
 // import TradingChart from "./TradingChart";
 import BarChart from "./BarChart";
+import LineChart from "./LineChart";
 
 // extend tells @pixi/react what Pixi.js components are available
 extend({
@@ -14,7 +15,11 @@ extend({
 
 function App() {
   return (
-    <div>
+    <div
+      style={{
+        padding: "40px",
+      }}
+    >
       <h1>PixiJS Test</h1>
       {/* <div style={{
         display: "grid",
@@ -27,7 +32,13 @@ function App() {
         </ul>
         <TradingChart />
       </div> */}
-      <BarChart />
+      <div className="centered">
+        <BarChart />
+      </div>
+      <hr />
+      <div className="centered">
+        <LineChart />
+      </div>
     </div>
   );
 }
