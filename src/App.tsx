@@ -2,7 +2,8 @@ import "./App.css";
 
 import { extend } from "@pixi/react";
 import { Container, Graphics, Sprite, Text } from "pixi.js";
-import TradingChart from "./TradingChart";
+// import TradingChart from "./TradingChart";
+import BarChart from "./BarChart";
 
 // extend tells @pixi/react what Pixi.js components are available
 extend({
@@ -16,7 +17,7 @@ function App() {
   return (
     <div>
       <h1>PixiJS Test</h1>
-      <div style={{
+      {/* <div style={{
         display: "grid",
         width: "100vw",
         gridTemplateColumns: "200px 1fr"
@@ -26,7 +27,8 @@ function App() {
           <li>BANKNIFTY</li>
         </ul>
         <TradingChart />
-      </div>
+      </div> */}
+      <BarChart />
     </div>
   );
 }
