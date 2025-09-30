@@ -5,6 +5,7 @@ import { Container, Graphics, Text } from "pixi.js";
 // import TradingChart from "./TradingChart";
 import BarChart from "./BarChart";
 import LineChart from "./LineChart";
+import CandleChart from "./CandleChart";
 
 // extend tells @pixi/react what Pixi.js components are available
 extend({
@@ -38,6 +39,10 @@ function App() {
       <hr />
       <div className="centered">
         <LineChart />
+      </div>
+      <hr />
+      <div className="centered">
+        <CandleChart />
       </div>
     </div>
   );
