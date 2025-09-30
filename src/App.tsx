@@ -1,14 +1,13 @@
 import "./App.css";
 
 import { extend } from "@pixi/react";
-import { Container, Graphics, Sprite, Text } from "pixi.js";
+import { Container, Graphics, Text } from "pixi.js";
 // import TradingChart from "./TradingChart";
 import BarChart from "./BarChart";
 
 // extend tells @pixi/react what Pixi.js components are available
 extend({
   Container,
-  Sprite,
   Graphics,
   Text,
 });
